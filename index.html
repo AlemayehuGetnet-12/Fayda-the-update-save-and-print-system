@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fiyda Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icon.png">
+  
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>
+        <i class="fa-solid fa-id-card"></i>Fiyda Management System!!!.
+      </h1>
+      <p>🌎Save, Update, Delete and Print Fiyda Information🛃!!!.</p>
+    </div>
+
+    <div class="main-grid">
+
+      <!-- FORM SECTION -->
+      <div class="form-section">
+
+        <form id="fiydaForm">
+
+          <!-- PHOTO -->
+          <div class="photo-section">
+
+            <label for="photo" class="photo-label">
+              <img
+                id="preview"
+                src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                alt="Photo"  >
+            </label>
+
+            <input type="file" id="photo" accept="image/*">
+
+            <h3>Upload Photo</h3>
+
+          </div>
+
+          <!-- FULL NAME -->
+          <div class="input-box">
+            <label>Full Name</label>
+            <input type="text" id="fullname" placeholder="Enter full name">
+          </div>
+
+          <!-- FIYDA NUMBER -->
+          <div class="input-box">
+            <label>Fiyda Number</label>
+            <input type="text" id="fiydaNumber" placeholder="Enter Fiyda Number">
+          </div>
+
+          <!-- PHONE -->
+          <div class="input-box">
+            <label>Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter phone number">
+          </div>
+
+          <!-- EMAIL -->
+          <div class="input-box">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter email">
+          </div>
+
+          <!-- AGE -->
+          <div class="input-box">
+            <label>Age</label>
+            <input type="number" id="age" placeholder="Enter age">
+          </div>
+
+          <!-- SEX -->
+          <div class="input-box">
+            <label>Sex</label>
+
+            <select id="sex">
+              <option value="">Select Sex</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+
+          <!-- ADDRESS -->
+          <div class="address-title">
+            <h2>Address Information</h2>
+          </div>
+
+          <div class="input-box">
+            <label>Country</label>
+            <input type="text" id="country" placeholder="Country">
+          </div>
+
+          <div class="input-box">
+            <label>Region</label>
+            <input type="text" id="region" placeholder="Region">
+          </div>
+
+          <div class="input-box">
+            <label>Zone</label>
+            <input type="text" id="zone" placeholder="Zone">
+          </div>
+
+          <div class="input-box">
+            <label>Woreda</label>
+            <input type="text" id="woreda" placeholder="Woreda">
+          </div>
+
+          <div class="input-box">
+            <label>Kebele</label>
+            <input type="text" id="kebele" placeholder="Kebele">
+          </div>
+
+          <!-- BUTTONS -->
+          <div class="buttons">
+
+            <button type="button" class="save" onclick="saveData()">
+              <i class="fa-solid fa-floppy-disk"></i>
+              Save
+            </button>
+
+            <button type="button" class="update" onclick="updateData()">
+              <i class="fa-solid fa-pen"></i>
+              Update
+            </button>
+
+            <button type="button" class="delete" onclick="deleteData()">
+              <i class="fa-solid fa-trash"></i>
+              Delete
+            </button>
+
+            <button type="button" class="print" onclick="printCard()">
+              <i class="fa-solid fa-print"></i>
+              Print
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+      <!-- OUTPUT CARD -->
+      <div class="card-section">
+
+        <div class="card" id="outputCard">
+
+          <div class="card-top">
+            <img
+              id="cardPhoto"
+              src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+              alt="Card Photo"
+            >
+
+            <h2 id="cardName">Full Name</h2>
+            <p class="fiyda-id" id="cardFiyda">Fiyda Number</p>
+          </div>
+
+          <div class="card-info">
+
+            <p>
+              <strong>Phone:</strong>
+              <span id="cardPhone">---</span>
+            </p>
+
+            <p>
+              <strong>Email:</strong>
+              <span id="cardEmail">---</span>
+            </p>
+
+            <p>
+              <strong>Age:</strong>
+              <span id="cardAge">---</span>
+            </p>
+
+            <p>
+              <strong>Sex:</strong>
+              <span id="cardSex">---</span>
+            </p>
+
+            <hr>
+
+            <h3>Address</h3>
+
+            <p>
+              <strong>Country:</strong>
+              <span id="cardCountry">---</span>
+            </p>
+
+            <p>
+              <strong>Region:</strong>
+              <span id="cardRegion">---</span>
+            </p>
+
+            <p>
+              <strong>Zone:</strong>
+              <span id="cardZone">---</span>
+            </p>
+
+            <p>
+              <strong>Woreda:</strong>
+              <span id="cardWoreda">---</span>
+            </p>
+
+            <p>
+              <strong>Kebele:</strong>
+              <span id="cardKebele">---</span>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
